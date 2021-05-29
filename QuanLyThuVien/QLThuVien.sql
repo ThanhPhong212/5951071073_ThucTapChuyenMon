@@ -1,11 +1,9 @@
 ﻿
---drop database QLThuVien
 create database QLThuVien
 go
 use QLThuVien
 go
 
------
 --drop table DOCGIA
 create table DOCGIA
 (
@@ -77,7 +75,7 @@ insert into ACCOUNT values ('1','phamhaingoc1', '123456', 1)
 insert into ACCOUNT values ('2','phamhaingoc2', '123456', 1)
 insert into ACCOUNT values ('3','phamminhhoang', '123456', 1)
 insert into ACCOUNT values ('7','nguyenthanhhai', '123456', 1)
-insert into ACCOUNT values ('999','admin', '', 0)
+insert into ACCOUNT values ('999','admin', '1234', 0)
 ----
 insert into DOCGIA values ('1','phamhaingoc1',N'Phạm Ngọc Hải','Nam',1996,N'510 Lý Thái Tổ')
 insert into DOCGIA values ('2','phamhaingoc2',N'Phạm Hải NGọc','Nam',1994,N'20 Lý Thái Tổ')
