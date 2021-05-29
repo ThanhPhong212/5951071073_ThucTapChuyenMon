@@ -1,0 +1,17 @@
+C:\Users\Thanh Phong\source\repos\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.csprojAssemblyReference.cache
+C:\Users\Thanh Phong\source\repos\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.Properties.Resources.resources
+C:\Users\Thanh Phong\source\repos\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.csproj.GenerateResource.cache
+C:\Users\Thanh Phong\source\repos\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.csproj.CoreCompileInputs.cache
+C:\Users\Thanh Phong\source\repos\QuanLyThuVien\QuanLyThuVien\bin\Debug\QuanLyThuVien.exe.config
+C:\Users\Thanh Phong\source\repos\QuanLyThuVien\QuanLyThuVien\bin\Debug\QuanLyThuVien.exe
+C:\Users\Thanh Phong\source\repos\QuanLyThuVien\QuanLyThuVien\bin\Debug\QuanLyThuVien.pdb
+C:\Users\Thanh Phong\source\repos\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.GUI.fDangKy.resources
+C:\Users\Thanh Phong\source\repos\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.GUI.fLogin.resources
+C:\Users\Thanh Phong\source\repos\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.exe
+C:\Users\Thanh Phong\source\repos\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.pdb
+C:\Users\Thanh Phong\source\repos\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.GUI.fDoiMatKhau.resources
+C:\Users\Thanh Phong\source\repos\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.GUI.fLichSuMuon.resources
+C:\Users\Thanh Phong\source\repos\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.GUI.fQLPhieuTra.resources
+C:\Users\Thanh Phong\source\repos\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.GUI.fQLSach.resources
+C:\Users\Thanh Phong\source\repos\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.GUI.fQLThanhVien.resources
+C:\Users\Thanh Phong\source\repos\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.GUI.QLPhieuMuon.resources
