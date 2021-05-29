@@ -99,8 +99,3 @@ insert into PHIEUMUON values ('3','2','2','1/3/2017', '1/4/2017')
 insert into PHIEUTRA values ('1','1','2','1/1/2016')
 insert into PHIEUTRA values ('2','2','1','1/2/2016')
 insert into PHIEUTRA values ('3','2','2','1/3/2016')
-
----
-
-
-select DOCGIA.HoTen from ACCOUNT, DOCGIA where ACCOUNT.MaDocGia = DOCGIA.MaDocGia
