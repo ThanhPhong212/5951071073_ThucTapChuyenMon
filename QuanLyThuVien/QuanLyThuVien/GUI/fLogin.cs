@@ -14,16 +14,16 @@ namespace QuanLyThuVien.GUI
     public partial class fLogin : Form
     {
         ThanhVien_BUS tvBus = new ThanhVien_BUS();
+
         public fLogin()
         {
             InitializeComponent();
         }
-
         private void btnDangnhap_Click(object sender, EventArgs e)
         {
             if (tvBus.DangNhap(txtTaikhoan.Text, txtMatkhau.Text) == true)
             {
-                fGiaoDien gd = new fGiaoDien();
+                fGiaoDien gd = new fGiaoDien(this, txtTaikhoan.Text);
                 this.Hide();
                 gd.ShowDialog();
                 this.Show();

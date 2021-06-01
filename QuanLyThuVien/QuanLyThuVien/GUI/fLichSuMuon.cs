@@ -15,16 +15,17 @@ namespace QuanLyThuVien.GUI
     {
         LichSuMuon_BUS lsmBus = new LichSuMuon_BUS();
         private string tdn;
-        public fLichSuMuon()
+        public fLichSuMuon(string _tdn)
         {
             InitializeComponent();
-            //tdn = _tdn;
+            tdn = _tdn;
         }
         private void fLichSuMuon_Load(object sender, EventArgs e)
         {
             dtgLichsumuon.DataSource = lsmBus.GetList(tdn);
         }
-        private void txtTimTenSach_EditValueChanged(object sender, EventArgs e)
+
+        private void txtTimtensach_TextChanged(object sender, EventArgs e)
         {
             if (txtTimtensach.Text == "")
             {
@@ -33,6 +34,5 @@ namespace QuanLyThuVien.GUI
             else
                 dtgLichsumuon.DataSource = lsmBus.TimKiem(txtTimtensach.Text, tdn);
         }
-
     }
 }

@@ -120,11 +120,29 @@
     <Compile Include="GUI\fQLThanhVien.Designer.cs">
       <DependentUpon>fQLThanhVien.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\QLPhieuMuon.cs">
+    <Compile Include="GUI\fSachDangMuon.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\QLPhieuMuon.Designer.cs">
-      <DependentUpon>QLPhieuMuon.cs</DependentUpon>
+    <Compile Include="GUI\fSachDangMuon.Designer.cs">
+      <DependentUpon>fSachDangMuon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\fThanhVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\fThanhVien.Designer.cs">
+      <DependentUpon>fThanhVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\fTimKiemSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\fTimKiemSach.Designer.cs">
+      <DependentUpon>fTimKiemSach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\fQLPhieuMuon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\fQLPhieuMuon.Designer.cs">
+      <DependentUpon>fQLPhieuMuon.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -133,6 +151,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\fDoiMatKhau.resx">
       <DependentUpon>fDoiMatKhau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\fGiaoDien.resx">
+      <DependentUpon>fGiaoDien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\fLichSuMuon.resx">
       <DependentUpon>fLichSuMuon.cs</DependentUpon>
@@ -149,8 +170,17 @@
     <EmbeddedResource Include="GUI\fQLThanhVien.resx">
       <DependentUpon>fQLThanhVien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\QLPhieuMuon.resx">
-      <DependentUpon>QLPhieuMuon.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\fSachDangMuon.resx">
+      <DependentUpon>fSachDangMuon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\fThanhVien.resx">
+      <DependentUpon>fThanhVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\fTimKiemSach.resx">
+      <DependentUpon>fTimKiemSach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\fQLPhieuMuon.resx">
+      <DependentUpon>fQLPhieuMuon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -160,6 +190,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -174,6 +205,8 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\logo.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

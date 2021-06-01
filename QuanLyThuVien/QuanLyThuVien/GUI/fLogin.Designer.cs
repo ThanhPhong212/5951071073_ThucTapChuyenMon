@@ -29,6 +29,7 @@ namespace QuanLyThuVien.GUI
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fLogin));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtTaikhoan = new System.Windows.Forms.TextBox();
@@ -36,12 +37,14 @@ namespace QuanLyThuVien.GUI
             this.btnDangnhap = new System.Windows.Forms.Button();
             this.btnDangky = new System.Windows.Forms.Button();
             this.btnThoat = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(152, 41);
+            this.label1.Location = new System.Drawing.Point(96, 128);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(70, 17);
             this.label1.TabIndex = 0;
@@ -50,7 +53,7 @@ namespace QuanLyThuVien.GUI
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(152, 95);
+            this.label2.Location = new System.Drawing.Point(95, 159);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(67, 17);
             this.label2.TabIndex = 1;
@@ -58,24 +61,24 @@ namespace QuanLyThuVien.GUI
             // 
             // txtTaikhoan
             // 
-            this.txtTaikhoan.Location = new System.Drawing.Point(243, 38);
+            this.txtTaikhoan.Location = new System.Drawing.Point(182, 125);
             this.txtTaikhoan.Name = "txtTaikhoan";
-            this.txtTaikhoan.Size = new System.Drawing.Size(170, 25);
+            this.txtTaikhoan.Size = new System.Drawing.Size(190, 25);
             this.txtTaikhoan.TabIndex = 2;
             // 
             // txtMatkhau
             // 
-            this.txtMatkhau.Location = new System.Drawing.Point(243, 92);
+            this.txtMatkhau.Location = new System.Drawing.Point(182, 156);
             this.txtMatkhau.Name = "txtMatkhau";
-            this.txtMatkhau.Size = new System.Drawing.Size(170, 25);
+            this.txtMatkhau.Size = new System.Drawing.Size(190, 25);
             this.txtMatkhau.TabIndex = 3;
             this.txtMatkhau.UseSystemPasswordChar = true;
             // 
             // btnDangnhap
             // 
-            this.btnDangnhap.Location = new System.Drawing.Point(166, 134);
+            this.btnDangnhap.Location = new System.Drawing.Point(186, 195);
             this.btnDangnhap.Name = "btnDangnhap";
-            this.btnDangnhap.Size = new System.Drawing.Size(98, 36);
+            this.btnDangnhap.Size = new System.Drawing.Size(92, 30);
             this.btnDangnhap.TabIndex = 5;
             this.btnDangnhap.Text = "Đăng nhập";
             this.btnDangnhap.UseVisualStyleBackColor = true;
@@ -83,9 +86,9 @@ namespace QuanLyThuVien.GUI
             // 
             // btnDangky
             // 
-            this.btnDangky.Location = new System.Drawing.Point(18, 134);
+            this.btnDangky.Location = new System.Drawing.Point(88, 195);
             this.btnDangky.Name = "btnDangky";
-            this.btnDangky.Size = new System.Drawing.Size(98, 36);
+            this.btnDangky.Size = new System.Drawing.Size(92, 30);
             this.btnDangky.TabIndex = 6;
             this.btnDangky.Text = "Đăng ký";
             this.btnDangky.UseVisualStyleBackColor = true;
@@ -93,19 +96,31 @@ namespace QuanLyThuVien.GUI
             // 
             // btnThoat
             // 
-            this.btnThoat.Location = new System.Drawing.Point(315, 134);
+            this.btnThoat.Location = new System.Drawing.Point(284, 195);
             this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(98, 36);
+            this.btnThoat.Size = new System.Drawing.Size(92, 30);
             this.btnThoat.TabIndex = 7;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = true;
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(135, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(199, 107);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 8;
+            this.pictureBox1.TabStop = false;
+            // 
             // fLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(432, 192);
+            this.ClientSize = new System.Drawing.Size(475, 251);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.btnDangky);
             this.Controls.Add(this.btnDangnhap);
@@ -114,10 +129,11 @@ namespace QuanLyThuVien.GUI
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "fLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng Nhập";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -132,5 +148,6 @@ namespace QuanLyThuVien.GUI
         private System.Windows.Forms.Button btnDangnhap;
         private System.Windows.Forms.Button btnDangky;
         private System.Windows.Forms.Button btnThoat;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
