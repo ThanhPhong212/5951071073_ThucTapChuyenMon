@@ -27,22 +27,30 @@ namespace QuanLyThuVien.GUI
                 this.Hide();
                 gd.ShowDialog();
                 this.Show();
+                txtTaikhoan.ResetText();
+                txtMatkhau.ResetText();
             }
             else
             {
-                MessageBox.Show("Sai tên đăng nhập hoặc mật khẩu!");
+                MessageBox.Show("Sai tên đăng nhập hoặc mật khẩu!", "Thông Báo",MessageBoxButtons.OK,MessageBoxIcon.Warning);
             }
         }
         private void btnThoat_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
-        private void btnDangky_Click(object sender, EventArgs e)
+        private void btnDangky_Click_1(object sender, EventArgs e)
         {
             fDangKy dk = new fDangKy();
             this.Hide();
             dk.ShowDialog();
             this.Show();
+        }
+        private void btnDangky_Click(object sender, EventArgs e)
+        {
+            fDangKy dk = new fDangKy();
+            this.Hide();
+            dk.ShowDialog();
         }
     }
 }

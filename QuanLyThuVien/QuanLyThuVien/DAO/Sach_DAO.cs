@@ -19,9 +19,8 @@ namespace QuanLyThuVien.DAO
         {
             if (GetData("select* from SACH where MaSach = '" + _s.MaSach + "'").Rows.Count > 0)
                 return false;
-            string sql = string.Format("Insert Into SACH values('{0}',N'{1}',N'{2}',N'{3}',N'{4}','{5}','{6}')",
+            string sql = string.Format("Insert Into SACH values('{0}',N'{1}',N'{2}',N'{3}',N'{4}',{5},{6},N'Còn')",
                 _s.MaSach, _s.TenSach, _s.TacGia, _s.TheLoai, _s.NhaXuatBan, _s.GiaSach, _s.SoLuong);
-
             Excute(sql);
             return true;
         }

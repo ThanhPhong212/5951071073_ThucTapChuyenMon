@@ -13,16 +13,15 @@ namespace QuanLyThuVien.DAO
     {
         public DataTable loadDocGia()
         {
-            string sqlString = @"select * from DOCGIA";
+            string sqlString = @"select* from DOCGIA";
             return GetData(sqlString);
         }
         public bool Insert(DocGia dg)
         {
             if (GetData("select* from DOCGIA where MaDocGia = '" + dg.MaDocGia + "'").Rows.Count > 0)
                 return false;
-            string sql = string.Format("Insert Into DOCGIA values('{0}','{1}','{2}','{3}','{4}')",
+            string sql = string.Format("Insert Into DOCGIA (HoTen, GioiTinh, NamSinh, DiaChi) values(N'{0}',N'{1}',N'{2}','{3}')",
                 dg.MaDocGia, dg.HoTen, dg.GioiTinh, dg.NamSinh, dg.DiaChi);
-
             Excute(sql);
             return true;
         }

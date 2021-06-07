@@ -21,10 +21,11 @@ namespace QuanLyThuVien.DAO
             return rs;
         }
         public void Excute(string sql)
-        {
+        {   
             connect.Open();
             SqlCommand command = new SqlCommand(sql, connect);
             command.ExecuteNonQuery();
+            command.Dispose();
             connect.Close();
         }
     }

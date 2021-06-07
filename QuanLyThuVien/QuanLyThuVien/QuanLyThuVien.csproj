@@ -78,11 +78,17 @@
     <Compile Include="GUI\fDangKy.Designer.cs">
       <DependentUpon>fDangKy.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\fDoiMatKhau.cs">
+    <Compile Include="GUI\fDangMuon.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\fDoiMatKhau.Designer.cs">
-      <DependentUpon>fDoiMatKhau.cs</DependentUpon>
+    <Compile Include="GUI\fDangMuon.Designer.cs">
+      <DependentUpon>fDangMuon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\fDatra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\fDatra.Designer.cs">
+      <DependentUpon>fDatra.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\fGiaoDien.cs">
       <SubType>Form</SubType>
@@ -90,17 +96,17 @@
     <Compile Include="GUI\fGiaoDien.Designer.cs">
       <DependentUpon>fGiaoDien.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\fLichSuMuon.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\fLichSuMuon.Designer.cs">
-      <DependentUpon>fLichSuMuon.cs</DependentUpon>
-    </Compile>
     <Compile Include="GUI\fLogin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\fLogin.Designer.cs">
       <DependentUpon>fLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\fQLPhieuMuon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\fQLPhieuMuon.Designer.cs">
+      <DependentUpon>fQLPhieuMuon.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\fQLPhieuTra.cs">
       <SubType>Form</SubType>
@@ -120,46 +126,25 @@
     <Compile Include="GUI\fQLThanhVien.Designer.cs">
       <DependentUpon>fQLThanhVien.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\fSachDangMuon.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\fSachDangMuon.Designer.cs">
-      <DependentUpon>fSachDangMuon.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\fThanhVien.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\fThanhVien.Designer.cs">
-      <DependentUpon>fThanhVien.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\fTimKiemSach.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\fTimKiemSach.Designer.cs">
-      <DependentUpon>fTimKiemSach.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\fQLPhieuMuon.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\fQLPhieuMuon.Designer.cs">
-      <DependentUpon>fQLPhieuMuon.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="GUI\fDangKy.resx">
       <DependentUpon>fDangKy.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\fDoiMatKhau.resx">
-      <DependentUpon>fDoiMatKhau.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\fDangMuon.resx">
+      <DependentUpon>fDangMuon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\fDatra.resx">
+      <DependentUpon>fDatra.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\fGiaoDien.resx">
       <DependentUpon>fGiaoDien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\fLichSuMuon.resx">
-      <DependentUpon>fLichSuMuon.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="GUI\fLogin.resx">
       <DependentUpon>fLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\fQLPhieuMuon.resx">
+      <DependentUpon>fQLPhieuMuon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\fQLPhieuTra.resx">
       <DependentUpon>fQLPhieuTra.cs</DependentUpon>
@@ -169,18 +154,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\fQLThanhVien.resx">
       <DependentUpon>fQLThanhVien.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\fSachDangMuon.resx">
-      <DependentUpon>fSachDangMuon.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\fThanhVien.resx">
-      <DependentUpon>fThanhVien.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\fTimKiemSach.resx">
-      <DependentUpon>fTimKiemSach.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\fQLPhieuMuon.resx">
-      <DependentUpon>fQLPhieuMuon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -207,6 +180,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\logo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\register_log_in_user_login_session_authorize_open_account_access_key-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\webicons_RPL2-05.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Book_Library-256_400x400.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-icon--16121-large[1].png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_group_man_people_users_male-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_access-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\child.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tải xuống.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -17,8 +17,9 @@ namespace QuanLyThuVien.GUI
     {
         private string tdn;
         private fLogin fLg;
+        
 
-        //tìm kiếm sách
+        //Sách
         Sach_BUS sachBUS = new Sach_BUS();
 
         //Thông tin
@@ -40,6 +41,14 @@ namespace QuanLyThuVien.GUI
             InitializeComponent();
             tdn = _tdn;
             fLg = _flg;
+            DataProvider _dt = new DataProvider();
+            DataTable dt = _dt.GetData("select * from ACCOUNT where ACCOUNT.TenDangNhap = '" + tdn + "'");
+            string gt = dt.Rows[0]["Quyen"].ToString();
+            if (gt == "1")
+            {
+                menuADM.Visible = false;
+                menuThongke.Visible = false;
+            }
         }
         
         private void fGiaoDien_Load(object sender, EventArgs e)
@@ -51,14 +60,11 @@ namespace QuanLyThuVien.GUI
             DataTable dt = _dt.GetData("select * from ACCOUNT, DOCGIA where ACCOUNT.MaDocGia = DOCGIA.MaDocGia and ACCOUNT.TenDangNhap = '" + tdn + "'");
             txtHoten.DataBindings.Add("Text", dt, "HoTen", true);
             txtMatv.DataBindings.Add("Text", dt, "MaDocGia", true);
-            //string gt = dt.Rows[0]["GioiTinh"].ToString();
             txtGioitinh.DataBindings.Add("Text", dt, "GioiTinh", true);
-            if (txtGioitinh.Text == "Nữ   ")
-                radNu.Checked = true;
-            else if (txtGioitinh.Text == "Nam  ")
-                radNam.Checked = true;
             dtNgaysinh.DataBindings.Add("Text", dt, "NamSinh", true);
             txtDiachi.DataBindings.Add("Text", dt, "DiaChi", true);
+            txtTennd.DataBindings.Add("Text", dt, "HoTen", true);
+            txtMatv2.DataBindings.Add("Text", dt, "MaDocGia", true);
 
             //load sach đang mượn
             dtgSachdangmuon.DataSource = sdmBus.GetList(tdn);
@@ -69,21 +75,19 @@ namespace QuanLyThuVien.GUI
         private void btnThaydoi_Click(object sender, EventArgs e)
         {
             DocGia _dg = new DocGia();
+            ThanhVien tv = new ThanhVien();
             _dg.HoTen = txtHoten.Text;
             _dg.MaDocGia = txtMatv.Text;
-
-            if (radNam.Checked == true)
-                _dg.GioiTinh = "Nam  ";
-            else if (radNu.Checked == true)
-                _dg.GioiTinh = "Nữ   ";
-
+            _dg.GioiTinh = txtGioitinh.Text;
             if (dtNgaysinh.Text == "")
                 _dg.NamSinh = DateTime.Now;
             else
                 _dg.NamSinh = dtNgaysinh.Value;
-
             _dg.DiaChi = txtDiachi.Text;
             tvBUS.sua(_dg);
+            lblDaluu.Text = "Bạn đã thay đổi thông tin thành công";
+            txtTennd.Text = txtHoten.Text;
+            txtMatv2.Text = txtMatv.Text;
         }
         private void txtTimkiem_TextChanged(object sender, EventArgs e)
         {
@@ -107,32 +111,37 @@ namespace QuanLyThuVien.GUI
                     dtgTimsach.DataSource = sachBUS.TimKiem(txtTimkiem.Text, "TinhTrang");
             }
         }
-
-        private void button3_Click(object sender, EventArgs e)
+        private void btnChapnhan_Click(object sender, EventArgs e)
         {
-
-            lb_KhongKhop.Visible = false;
-            lb_sai.Visible = false;
-            lb_ThanhCong.Visible = false;
-            lblchua.Visible = false;
             if (txtMKM.Text != txtNL.Text)
             {
-                lb_KhongKhop.Visible = true;
+                lblThongbao.Text = "Mật khẩu không khớp";
+                txtMKC.ResetText();
+                txtMKM.ResetText();
+                txtNL.ResetText();
                 return;
             }
 
             if (mkBus.CheckExist(tdn, txtMKC.Text) == true)
             {
+                lblThongbao.ResetText();
                 ThanhVien _tv = new ThanhVien();
                 _tv.TenDangNhap = tdn;
                 _tv.MatKhau = txtMKM.Text;
 
                 mkBus.DoiMatKhau(_tv);
-                lb_ThanhCong.Visible = true;
+                MessageBox.Show("Bạn đã đổi mật khẩu thành công", "Thông Báo",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                txtMKC.ResetText();
+                txtMKM.ResetText();
+                txtNL.ResetText();
             }
             else
             {
-                lb_sai.Visible = true;
+                lblThongbao.ResetText();
+                lblThongbao.Text = "Nhập sai mật khẩu";
+                txtMKC.ResetText();
+                txtMKM.ResetText();
+                txtNL.ResetText();
             }
         }
 
@@ -151,10 +160,80 @@ namespace QuanLyThuVien.GUI
             if (txtTimtensachLS.Text == "")
             {
                 dtgLichsumuon.DataSource = lsmBus.GetList(tdn);
-
             }
             else
                 dtgLichsumuon.DataSource = lsmBus.TimKiem(txtTimtensachLS.Text, tdn);
+        }
+
+        private void quảnLýSáchToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fQLSach qls = new fQLSach();
+            this.Hide();
+            qls.ShowDialog();
+            this.Show();
+        }
+
+        private void quảnLýSáchToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            fQLSach qls = new fQLSach();
+            this.Hide();
+            qls.ShowDialog();
+            this.Show();
+        }
+
+        private void quảnLýToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fQLThanhVien qltv = new fQLThanhVien();
+            this.Hide();
+            qltv.ShowDialog();
+            this.Show();
+        }
+
+        private void quảnLyPhiếuMượnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fQLPhieuMuon qlm = new fQLPhieuMuon();
+            this.Hide();
+            qlm.ShowDialog();
+            this.Show();
+        }
+
+        private void quảnLýPhiếuTrãToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fQLPhieuTra qlt = new fQLPhieuTra();
+            this.Hide();
+            qlt.ShowDialog();
+            this.Show();
+        }
+
+        private void đăngXuấtToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+            this.Close();
+
+        }
+
+        private void fGiaoDien_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("Bạn có muốn đăng xuất !", "Thông Báo", MessageBoxButtons.YesNo,MessageBoxIcon.Question) != System.Windows.Forms.DialogResult.Yes)
+            {
+                e.Cancel = true;
+            }
+        }
+
+        private void đangMượnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fDangMuon dm = new fDangMuon();
+            this.Hide();
+            dm.ShowDialog();
+            this.Show();
+        }
+
+        private void đãTrảToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fDatra dt = new fDatra();
+            this.Hide();
+            dt.ShowDialog();
+            this.Show();
         }
     }
 }

@@ -8,7 +8,6 @@ go
 create table DOCGIA
 (
 	MaDocGia nchar(10),
-	TenDangNhap nchar(30),
 	HoTen nchar(30),
 	GioiTinh nchar(5),
 	NamSinh datetime,
@@ -77,11 +76,11 @@ insert into ACCOUNT values ('3','phamminhhoang', '123456', 1)
 insert into ACCOUNT values ('7','nguyenthanhhai', '123456', 1)
 insert into ACCOUNT values ('999','admin', '1234', 0)
 ----
-insert into DOCGIA values ('1','phamhaingoc1',N'Phạm Ngọc Hải','Nam',1996,N'510 Lý Thái Tổ')
-insert into DOCGIA values ('2','phamhaingoc2',N'Phạm Hải NGọc','Nam',1994,N'20 Lý Thái Tổ')
-insert into DOCGIA values ('3','phamminhhoang',N'Phạm Minh Hoang','Nam',1994,N'20 Lý Thái Tổ')
-insert into DOCGIA values ('7','nguoithanhhai',N'Nguyễn Thanh Hải',N'Nữ',1994,N'201 Lý Thái Tổ')
-insert into DOCGIA values ('15','nguyenhuuhoanghieu',N'Nguyễn Hữu Hoàng Hiếu',N'Nữ',1994,N'120 Lý Thái Tổ')
+insert into DOCGIA values ('1',N'Phạm Ngọc Hải','Nam',1996,N'510 Lý Thái Tổ')
+insert into DOCGIA values ('2',N'Phạm Hải NGọc','Nam',1994,N'20 Lý Thái Tổ')
+insert into DOCGIA values ('3',N'Phạm Minh Hoang','Nam',1994,N'20 Lý Thái Tổ')
+insert into DOCGIA values ('7',N'Nguyễn Thanh Hải',N'Nữ',1994,N'201 Lý Thái Tổ')
+insert into DOCGIA values ('15',N'Nguyễn Hữu Hoàng Hiếu',N'Nữ',1994,N'120 Lý Thái Tổ')
 
 ----
 insert into SACH values ('1', N'Lập trình hướng đối tượng', N'Không biết', N'Lập trình', 'HCMUS', 1500, 3, N'Còn')
@@ -97,3 +96,5 @@ insert into PHIEUMUON values ('3','2','2','1/3/2017', '1/4/2017')
 insert into PHIEUTRA values ('1','1','2','1/1/2016')
 insert into PHIEUTRA values ('2','2','1','1/2/2016')
 insert into PHIEUTRA values ('3','2','2','1/3/2016')
+go
+select Docgia.MaDocGia, TenDangNhap, HoTen, GioiTinh, NamSinh, DiaChi fROM DOCGIA,ACCOUNT WHERE DOCGIA.MaDocGia=ACCOUNT.MaDocGia 

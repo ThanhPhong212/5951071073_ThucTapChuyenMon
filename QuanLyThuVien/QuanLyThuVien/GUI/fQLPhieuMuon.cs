@@ -22,50 +22,93 @@ namespace QuanLyThuVien.GUI
 
         private void fQLPhieuMuon_Load(object sender, EventArgs e)
         {
-            dtgQLphieumuon.DataSource = pmBUS.GetList();
+            ResetData();
+            dtgPhieumuon.DataSource = pmBUS.GetList();
+            bigdings();
         }
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            //lb_exist.Visible = false;
+            ///lb_exist.Visible = false;
             if (pmBUS.CheckExist("DOCGIA", txtMadocgia.Text) == true && pmBUS.CheckExist("SACH", txtMasach.Text) == true)
             {
-
                 PhieuMuon _pM = new PhieuMuon();
-
                 Random rdm = new Random();
                 _pM.MaPhieu = rdm.Next(0, 1000).ToString();
-
                 _pM.MaDocGia = txtMadocgia.Text;
                 _pM.MaSach = txtMasach.Text;
 
                 if (dtNgaymuon.Text == "")
                     _pM.NgayMuon = DateTime.Now;
                 else
-                    //_pM.NgayMuon = dtNgaymuon.Date;
-                //if (d.Text == "")
+                    _pM.NgayMuon = dtNgaymuon.Value;
+                if (dtgPhieumuon.Text == "")
                     _pM.NgayPhaiTra = DateTime.Now;
-                //else
-                //    _pM.NgayPhaiTra = d_NM.DateTime;
+                else
+                    _pM.NgayPhaiTra = dtNgayphaitra.Value;
 
-                //int check = pmBUS.Them(_pM);
-
-               // if (check == -1)
-                  //  lb_Trung.Visible = true;
-               // else
-                //    ucFrmQLPhieuMuon_Load(sender, e);
+                int check = pmBUS.Them(_pM);
+                if (check == -1)
+                {
+                    //lb_Trung.Visible = true;
+                }
+                else
+                fQLPhieuMuon_Load(sender, e);
             }
             else
             {
-               // lb_ChuaNhap.Visible = false;
-               // lb_exist.Visible = true;
+                //lb_ChuaNhap.Visible = false;
+                //lb_exist.Visible = true;
                 //lb_Trung.Visible = false;
             }
         }
+        public void bigdings()
+        {
+            txtMasach.DataBindings.Clear();
+            txtMasach.DataBindings.Add("text", dtgPhieumuon.DataSource, "MaSach");
 
+            txtMadocgia.DataBindings.Clear();
+            txtMadocgia.DataBindings.Add("text", dtgPhieumuon.DataSource, "MaDocGia");
+
+            txtMaphieu.DataBindings.Clear();
+            txtMaphieu.DataBindings.Add("text", dtgPhieumuon.DataSource, "MaPhieu");
+
+            dtNgaymuon.DataBindings.Clear();
+            dtNgaymuon.DataBindings.Add("text", dtgPhieumuon.DataSource, "NgayMuon");
+
+            dtNgayphaitra.DataBindings.Clear();
+            dtNgayphaitra.DataBindings.Add("text", dtgPhieumuon.DataSource, "NgayPhaiTra");
+
+        }
         private void btnSua_Click(object sender, EventArgs e)
         {
+            if (txtMaphieu.Text != "")
+            {
+                if (pmBUS.CheckExist("DOCGIA", txtMadocgia.Text) == true && pmBUS.CheckExist("SACH", txtMasach.Text) == true)
+                {
+                    PhieuMuon _pM = new PhieuMuon();
+                    _pM.MaDocGia = txtMadocgia.Text;
+                    _pM.MaSach = txtMasach.Text;
+                    _pM.MaPhieu = txtMaphieu.Text;
 
+
+                    if (dtNgaymuon.Text == "")
+                        _pM.NgayMuon = DateTime.Now;
+                    else
+                        _pM.NgayMuon = dtNgaymuon.Value;
+                    if (dtNgayphaitra.Text == "")
+                        _pM.NgayPhaiTra = DateTime.Now;
+                    else
+                        _pM.NgayPhaiTra = dtNgaymuon.Value;
+
+                    pmBUS.Sua(_pM);
+                    fQLPhieuMuon_Load(sender, e);
+                }
+                else
+                {
+                    //lb_exist.Visible = true;
+                }
+            }
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
@@ -73,38 +116,32 @@ namespace QuanLyThuVien.GUI
             if (txtMaphieu.Text != "")
             {
                 pmBUS.Xoa(txtMaphieu.Text);
+                ResetData();
                 fQLPhieuMuon_Load(sender, e);
             }
+        }
+        private void ResetData()
+        {
+            txtMaphieu.ResetText();
+            txtMasach.ResetText();
+            txtMadocgia.ResetText();
         }
 
         private void txtTimkiem_TextChanged(object sender, EventArgs e)
         {
             if (txtTimkiem.Text == "")
             {
-                dtgQLphieumuon.DataSource = pmBUS.GetList();
-
+                dtgPhieumuon.DataSource = pmBUS.GetList();
             }
             else
             {
-                if (radMasach.Checked == true)
-                    dtgQLphieumuon.DataSource = pmBUS.TimKiem(txtTimkiem.Text, "MaSach");
-                else if (radMadocgia.Checked == true)
-                    dtgQLphieumuon.DataSource = pmBUS.TimKiem(txtTimkiem.Text, "MaDocGia");
+                if (radDocgia.Checked == true)
+                    dtgPhieumuon.DataSource = pmBUS.TimKiem(txtTimkiem.Text, "MaSach");
+                else if (radMasach.Checked == true)
+                    dtgPhieumuon.DataSource = pmBUS.TimKiem(txtTimkiem.Text, "MaDocGia");
                 else if (radNgaymuon.Checked == true)
-                    dtgQLphieumuon.DataSource = pmBUS.TimKiem(txtTimkiem.Text, "NgayMuon");
+                    dtgPhieumuon.DataSource = pmBUS.TimKiem(txtTimkiem.Text, "NgayMuon");
             }
-        }
-
-        private void dtgQLphieumuon_TabIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dtgQLphieumuon_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            int i;
-            i = dtgQLphieumuon.CurrentRow.Index;
-            txtMaphieu.Text = dtgQLphieumuon.Rows[i].Cells[0].Value.ToString();
         }
     }
 }

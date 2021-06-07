@@ -44,7 +44,7 @@ namespace QuanLyThuVien.GUI
             // 
             // txtMatkhau
             // 
-            this.txtMatkhau.Location = new System.Drawing.Point(159, 58);
+            this.txtMatkhau.Location = new System.Drawing.Point(206, 68);
             this.txtMatkhau.Margin = new System.Windows.Forms.Padding(4);
             this.txtMatkhau.Name = "txtMatkhau";
             this.txtMatkhau.Size = new System.Drawing.Size(201, 25);
@@ -53,7 +53,7 @@ namespace QuanLyThuVien.GUI
             // 
             // txtTaikhoan
             // 
-            this.txtTaikhoan.Location = new System.Drawing.Point(159, 25);
+            this.txtTaikhoan.Location = new System.Drawing.Point(206, 35);
             this.txtTaikhoan.Margin = new System.Windows.Forms.Padding(4);
             this.txtTaikhoan.Name = "txtTaikhoan";
             this.txtTaikhoan.Size = new System.Drawing.Size(201, 25);
@@ -62,7 +62,7 @@ namespace QuanLyThuVien.GUI
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(18, 61);
+            this.label2.Location = new System.Drawing.Point(65, 71);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(67, 17);
@@ -72,7 +72,7 @@ namespace QuanLyThuVien.GUI
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(18, 25);
+            this.label1.Location = new System.Drawing.Point(65, 35);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(70, 17);
@@ -81,17 +81,19 @@ namespace QuanLyThuVien.GUI
             // 
             // btnDangky
             // 
-            this.btnDangky.Location = new System.Drawing.Point(72, 138);
+            this.btnDangky.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDangky.Location = new System.Drawing.Point(119, 148);
             this.btnDangky.Name = "btnDangky";
             this.btnDangky.Size = new System.Drawing.Size(91, 30);
             this.btnDangky.TabIndex = 8;
-            this.btnDangky.Text = "Đăng Ký";
+            this.btnDangky.Text = "Đăng ký";
             this.btnDangky.UseVisualStyleBackColor = true;
             this.btnDangky.Click += new System.EventHandler(this.btnDangky_Click);
             // 
             // btnHuy
             // 
-            this.btnHuy.Location = new System.Drawing.Point(205, 138);
+            this.btnHuy.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnHuy.Location = new System.Drawing.Point(252, 148);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(91, 30);
             this.btnHuy.TabIndex = 9;
@@ -101,7 +103,7 @@ namespace QuanLyThuVien.GUI
             // 
             // txtNLMK
             // 
-            this.txtNLMK.Location = new System.Drawing.Point(159, 93);
+            this.txtNLMK.Location = new System.Drawing.Point(206, 103);
             this.txtNLMK.Margin = new System.Windows.Forms.Padding(4);
             this.txtNLMK.Name = "txtNLMK";
             this.txtNLMK.Size = new System.Drawing.Size(201, 25);
@@ -111,7 +113,7 @@ namespace QuanLyThuVien.GUI
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(17, 96);
+            this.label3.Location = new System.Drawing.Point(64, 106);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(120, 17);
             this.label3.TabIndex = 14;
@@ -120,7 +122,7 @@ namespace QuanLyThuVien.GUI
             // lblTrung
             // 
             this.lblTrung.AutoSize = true;
-            this.lblTrung.Location = new System.Drawing.Point(108, 180);
+            this.lblTrung.Location = new System.Drawing.Point(155, 190);
             this.lblTrung.Name = "lblTrung";
             this.lblTrung.Size = new System.Drawing.Size(146, 17);
             this.lblTrung.TabIndex = 15;
@@ -129,7 +131,7 @@ namespace QuanLyThuVien.GUI
             // lblTontai
             // 
             this.lblTontai.AutoSize = true;
-            this.lblTontai.Location = new System.Drawing.Point(116, 180);
+            this.lblTontai.Location = new System.Drawing.Point(163, 190);
             this.lblTontai.Name = "lblTontai";
             this.lblTontai.Size = new System.Drawing.Size(130, 17);
             this.lblTontai.TabIndex = 16;
@@ -138,7 +140,7 @@ namespace QuanLyThuVien.GUI
             // lblChuanhap
             // 
             this.lblChuanhap.AutoSize = true;
-            this.lblChuanhap.Location = new System.Drawing.Point(69, 180);
+            this.lblChuanhap.Location = new System.Drawing.Point(116, 190);
             this.lblChuanhap.Name = "lblChuanhap";
             this.lblChuanhap.Size = new System.Drawing.Size(227, 17);
             this.lblChuanhap.TabIndex = 17;
@@ -148,7 +150,8 @@ namespace QuanLyThuVien.GUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(376, 217);
+            this.BackColor = System.Drawing.Color.PowderBlue;
+            this.ClientSize = new System.Drawing.Size(468, 229);
             this.Controls.Add(this.lblChuanhap);
             this.Controls.Add(this.lblTontai);
             this.Controls.Add(this.lblTrung);
@@ -163,8 +166,9 @@ namespace QuanLyThuVien.GUI
             this.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "fDangKy";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "fDangKy";
+            this.Text = "Đăng Ký Tài Khoản";
             this.Load += new System.EventHandler(this.fDangKy_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
