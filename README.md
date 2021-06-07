@@ -9,14 +9,54 @@
 * Giảng viên: Thầy Nguyễn Lê Minh. 
 
 ## Phần 1: Công nghệ sử dụng:
-* 
-* 
+* Visual Studio 2019.
+* Window Form C#.
+* Micosoft SQL Server. 
 ## Phần 2: Các chức năng đã hoàn thành:
-1. 
-2. 
-3. 
-
-
+1. Xây dựng Cơ sở dữ liệu quản lí thư viện.
+2. Mô hình 3 lớp Layers.
+3. Chức năng đăng nhập
+4. Đăng kí tài khoản thành viên
+5. Các chức năng người dùng:
+	* Tìm kiếm sách:
+		-Tìm kiếm theo tên sách
+		-Tìm kiếm theo mã sách
+		-Tìm kiếm theo thể loại
+		-Tìm kiếm theo tác giả
+		-Tìm kiếm theo tình trạng
+		-Tìm kiếm theo nhà xuất bản
+	* Thông tin người dùng
+		-Thay đổi thông tin người dùng
+	* Đổi mật khẩu
+	* Sách đang mượn
+		-Tìm kiếm theo tên sách
+	* Lịch sử mượn
+		-Tìm kiếm theo tên sách
+6. Các chưc năng admin:
+	* Quản lý thành viên
+		-Tìm kiếm theo mã thành viên
+		-Sửa thông tin thành viên
+		-Xóa thành viên
+	* Quản lý sách
+		-Tìm kiếm theo mã sách
+		-Thêm sách
+		-Xóa sách
+		-Sửa sách
+	* Quản lý phiếu mượn
+		-Tìm kiếm theo mã phiếu
+		-Thêm 
+		-Xóa 
+		-Sửa
+	* Quản lý phiếu trả
+		-Tìm kiếm theo mã phiếu
+		-Thêm 
+		-Xóa 
+		-Sửa
+	* Thống kê
+		-Đang mượn
+		-Đã trã
+7. Đăng xuất
+8. Phân quyền Admin và ngừơi dùng
 ## Phần 3: Các chức năng chưa hoàn thành:
 1.
 2.
