@@ -185,9 +185,6 @@
   <data name="txtTaikhoan.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="txtTaikhoan.Text" xml:space="preserve">
-    <value>admin</value>
-  </data>
   <data name="&gt;&gt;txtTaikhoan.Name" xml:space="preserve">
     <value>txtTaikhoan</value>
   </data>

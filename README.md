@@ -56,13 +56,14 @@
 		-Đang mượn
 		-Đã trã
 7. Đăng xuất
-8. Phân quyền Admin và ngừơi dùng
+8. Phân quyền Admin và ngừơi dùng.
+9. Đóng gói phần mềm.
 ## Phần 3: Các chức năng chưa hoàn thành:
-1.
-2.
-3.
-
+1.Chưa thêm được người dùng trong phần quản  ý thành viên
 ## Hướng dẫn sử dụng:
-
-
+Mở file .exe và làm theo hướng dẫn README.txt.
+Run chương trình.
+Đăng ký tài khoản.
+Bắt đầu sử dụng và thao tác nhập liệu với các tính năng của chương trình.
+Sau khi sử dụng xong,click ĐĂNG XUẤT để quay lại màn hình ĐĂNG NHẬP hoặc click THOÁT để đóng ứng dụng.
 Xin cám ơn!
