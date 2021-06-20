@@ -42,6 +42,7 @@ namespace QuanLyThuVien.GUI
             this.txtTimkiem = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.label14 = new System.Windows.Forms.Label();
             this.txtGioitinh = new System.Windows.Forms.ComboBox();
             this.lblDaluu = new System.Windows.Forms.Label();
             this.dtNgaysinh = new System.Windows.Forms.DateTimePicker();
@@ -55,6 +56,7 @@ namespace QuanLyThuVien.GUI
             this.label2 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.label15 = new System.Windows.Forms.Label();
             this.lblThongbao = new System.Windows.Forms.Label();
             this.btnChapnhan = new System.Windows.Forms.Button();
             this.txtNL = new System.Windows.Forms.TextBox();
@@ -72,6 +74,11 @@ namespace QuanLyThuVien.GUI
             this.txtTimtensachLS = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.menu = new System.Windows.Forms.MenuStrip();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtTennd = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.txtMatv2 = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.menuADM = new System.Windows.Forms.ToolStripMenuItem();
             this.quảnLýSáchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quảnLýToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -81,12 +88,7 @@ namespace QuanLyThuVien.GUI
             this.đangMượnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.đãTrảToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.đăngXuấtToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.txtMatv2 = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.txtTennd = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgTimsach)).BeginInit();
@@ -240,6 +242,7 @@ namespace QuanLyThuVien.GUI
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.LightBlue;
+            this.tabPage2.Controls.Add(this.label14);
             this.tabPage2.Controls.Add(this.txtGioitinh);
             this.tabPage2.Controls.Add(this.lblDaluu);
             this.tabPage2.Controls.Add(this.dtNgaysinh);
@@ -255,9 +258,19 @@ namespace QuanLyThuVien.GUI
             this.tabPage2.Location = new System.Drawing.Point(4, 26);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(833, 518);
+            this.tabPage2.Size = new System.Drawing.Size(837, 518);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Thông tin";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label14.Location = new System.Drawing.Point(260, 29);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(300, 32);
+            this.label14.TabIndex = 29;
+            this.label14.Text = "Thông Tin Người Dùng ";
             // 
             // txtGioitinh
             // 
@@ -265,7 +278,7 @@ namespace QuanLyThuVien.GUI
             this.txtGioitinh.Items.AddRange(new object[] {
             "Nam",
             "Nữ"});
-            this.txtGioitinh.Location = new System.Drawing.Point(178, 161);
+            this.txtGioitinh.Location = new System.Drawing.Point(269, 198);
             this.txtGioitinh.Name = "txtGioitinh";
             this.txtGioitinh.Size = new System.Drawing.Size(273, 25);
             this.txtGioitinh.TabIndex = 28;
@@ -274,7 +287,7 @@ namespace QuanLyThuVien.GUI
             // 
             this.lblDaluu.AutoSize = true;
             this.lblDaluu.ForeColor = System.Drawing.Color.Red;
-            this.lblDaluu.Location = new System.Drawing.Point(175, 333);
+            this.lblDaluu.Location = new System.Drawing.Point(266, 370);
             this.lblDaluu.Name = "lblDaluu";
             this.lblDaluu.Size = new System.Drawing.Size(0, 17);
             this.lblDaluu.TabIndex = 27;
@@ -282,14 +295,15 @@ namespace QuanLyThuVien.GUI
             // dtNgaysinh
             // 
             this.dtNgaysinh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtNgaysinh.Location = new System.Drawing.Point(178, 204);
+            this.dtNgaysinh.Location = new System.Drawing.Point(269, 241);
             this.dtNgaysinh.Name = "dtNgaysinh";
             this.dtNgaysinh.Size = new System.Drawing.Size(273, 25);
             this.dtNgaysinh.TabIndex = 25;
             // 
             // btnThaydoi
             // 
-            this.btnThaydoi.Location = new System.Drawing.Point(282, 281);
+            this.btnThaydoi.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnThaydoi.Location = new System.Drawing.Point(373, 318);
             this.btnThaydoi.Name = "btnThaydoi";
             this.btnThaydoi.Size = new System.Drawing.Size(169, 31);
             this.btnThaydoi.TabIndex = 24;
@@ -299,14 +313,14 @@ namespace QuanLyThuVien.GUI
             // 
             // txtDiachi
             // 
-            this.txtDiachi.Location = new System.Drawing.Point(178, 248);
+            this.txtDiachi.Location = new System.Drawing.Point(269, 285);
             this.txtDiachi.Name = "txtDiachi";
             this.txtDiachi.Size = new System.Drawing.Size(273, 25);
             this.txtDiachi.TabIndex = 20;
             // 
             // txtMatv
             // 
-            this.txtMatv.Location = new System.Drawing.Point(178, 115);
+            this.txtMatv.Location = new System.Drawing.Point(269, 152);
             this.txtMatv.Name = "txtMatv";
             this.txtMatv.ReadOnly = true;
             this.txtMatv.Size = new System.Drawing.Size(273, 25);
@@ -314,7 +328,7 @@ namespace QuanLyThuVien.GUI
             // 
             // txtHoten
             // 
-            this.txtHoten.Location = new System.Drawing.Point(178, 70);
+            this.txtHoten.Location = new System.Drawing.Point(269, 107);
             this.txtHoten.Name = "txtHoten";
             this.txtHoten.Size = new System.Drawing.Size(273, 25);
             this.txtHoten.TabIndex = 18;
@@ -322,7 +336,7 @@ namespace QuanLyThuVien.GUI
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(53, 250);
+            this.label5.Location = new System.Drawing.Point(144, 287);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(56, 17);
             this.label5.TabIndex = 17;
@@ -331,7 +345,7 @@ namespace QuanLyThuVien.GUI
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(51, 210);
+            this.label4.Location = new System.Drawing.Point(142, 247);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(71, 17);
             this.label4.TabIndex = 16;
@@ -340,7 +354,7 @@ namespace QuanLyThuVien.GUI
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(53, 161);
+            this.label3.Location = new System.Drawing.Point(144, 198);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(69, 17);
             this.label3.TabIndex = 15;
@@ -349,7 +363,7 @@ namespace QuanLyThuVien.GUI
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(51, 118);
+            this.label2.Location = new System.Drawing.Point(142, 155);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(105, 17);
             this.label2.TabIndex = 14;
@@ -358,7 +372,7 @@ namespace QuanLyThuVien.GUI
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(51, 73);
+            this.label6.Location = new System.Drawing.Point(142, 110);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(56, 17);
             this.label6.TabIndex = 13;
@@ -367,6 +381,7 @@ namespace QuanLyThuVien.GUI
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.Color.LightBlue;
+            this.tabPage3.Controls.Add(this.label15);
             this.tabPage3.Controls.Add(this.lblThongbao);
             this.tabPage3.Controls.Add(this.btnChapnhan);
             this.tabPage3.Controls.Add(this.txtNL);
@@ -382,20 +397,30 @@ namespace QuanLyThuVien.GUI
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Đổi mật khẩu";
             // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label15.Location = new System.Drawing.Point(325, 41);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(136, 32);
+            this.label15.TabIndex = 30;
+            this.label15.Text = "Mật khẩu ";
+            // 
             // lblThongbao
             // 
             this.lblThongbao.AutoSize = true;
             this.lblThongbao.ForeColor = System.Drawing.Color.Red;
-            this.lblThongbao.Location = new System.Drawing.Point(192, 271);
+            this.lblThongbao.Location = new System.Drawing.Point(280, 310);
             this.lblThongbao.Name = "lblThongbao";
             this.lblThongbao.Size = new System.Drawing.Size(0, 17);
             this.lblThongbao.TabIndex = 15;
             // 
             // btnChapnhan
             // 
-            this.btnChapnhan.Location = new System.Drawing.Point(195, 227);
+            this.btnChapnhan.Location = new System.Drawing.Point(309, 266);
             this.btnChapnhan.Name = "btnChapnhan";
-            this.btnChapnhan.Size = new System.Drawing.Size(161, 30);
+            this.btnChapnhan.Size = new System.Drawing.Size(229, 30);
             this.btnChapnhan.TabIndex = 14;
             this.btnChapnhan.Text = "Chấp Nhận";
             this.btnChapnhan.UseVisualStyleBackColor = true;
@@ -403,32 +428,32 @@ namespace QuanLyThuVien.GUI
             // 
             // txtNL
             // 
-            this.txtNL.Location = new System.Drawing.Point(195, 180);
+            this.txtNL.Location = new System.Drawing.Point(283, 219);
             this.txtNL.Name = "txtNL";
-            this.txtNL.Size = new System.Drawing.Size(212, 25);
+            this.txtNL.Size = new System.Drawing.Size(280, 25);
             this.txtNL.TabIndex = 13;
             this.txtNL.UseSystemPasswordChar = true;
             // 
             // txtMKM
             // 
-            this.txtMKM.Location = new System.Drawing.Point(195, 128);
+            this.txtMKM.Location = new System.Drawing.Point(283, 167);
             this.txtMKM.Name = "txtMKM";
-            this.txtMKM.Size = new System.Drawing.Size(212, 25);
+            this.txtMKM.Size = new System.Drawing.Size(280, 25);
             this.txtMKM.TabIndex = 12;
             this.txtMKM.UseSystemPasswordChar = true;
             // 
             // txtMKC
             // 
-            this.txtMKC.Location = new System.Drawing.Point(195, 74);
+            this.txtMKC.Location = new System.Drawing.Point(283, 113);
             this.txtMKC.Name = "txtMKC";
-            this.txtMKC.Size = new System.Drawing.Size(212, 25);
+            this.txtMKC.Size = new System.Drawing.Size(280, 25);
             this.txtMKC.TabIndex = 11;
             this.txtMKC.UseSystemPasswordChar = true;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(88, 183);
+            this.label7.Location = new System.Drawing.Point(176, 222);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(63, 17);
             this.label7.TabIndex = 10;
@@ -437,7 +462,7 @@ namespace QuanLyThuVien.GUI
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(88, 131);
+            this.label8.Location = new System.Drawing.Point(176, 170);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(98, 17);
             this.label8.TabIndex = 9;
@@ -446,7 +471,7 @@ namespace QuanLyThuVien.GUI
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(88, 74);
+            this.label9.Location = new System.Drawing.Point(176, 113);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(88, 17);
             this.label9.TabIndex = 8;
@@ -542,78 +567,6 @@ namespace QuanLyThuVien.GUI
             this.menu.TabIndex = 1;
             this.menu.Text = "menuStrip1";
             // 
-            // menuADM
-            // 
-            this.menuADM.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.quảnLýSáchToolStripMenuItem,
-            this.quảnLýToolStripMenuItem,
-            this.quảnLyPhiếuMượnToolStripMenuItem,
-            this.quảnLýPhiếuTrãToolStripMenuItem});
-            this.menuADM.Image = global::QuanLyThuVien.Properties.Resources.user_group_man_people_users_male_512;
-            this.menuADM.Name = "menuADM";
-            this.menuADM.Size = new System.Drawing.Size(77, 21);
-            this.menuADM.Text = "Admin";
-            // 
-            // quảnLýSáchToolStripMenuItem
-            // 
-            this.quảnLýSáchToolStripMenuItem.Name = "quảnLýSáchToolStripMenuItem";
-            this.quảnLýSáchToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
-            this.quảnLýSáchToolStripMenuItem.Text = "Quản lý sách";
-            this.quảnLýSáchToolStripMenuItem.Click += new System.EventHandler(this.quảnLýSáchToolStripMenuItem_Click_1);
-            // 
-            // quảnLýToolStripMenuItem
-            // 
-            this.quảnLýToolStripMenuItem.Name = "quảnLýToolStripMenuItem";
-            this.quảnLýToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
-            this.quảnLýToolStripMenuItem.Text = "Quản lý thành viên";
-            this.quảnLýToolStripMenuItem.Click += new System.EventHandler(this.quảnLýToolStripMenuItem_Click);
-            // 
-            // quảnLyPhiếuMượnToolStripMenuItem
-            // 
-            this.quảnLyPhiếuMượnToolStripMenuItem.Name = "quảnLyPhiếuMượnToolStripMenuItem";
-            this.quảnLyPhiếuMượnToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
-            this.quảnLyPhiếuMượnToolStripMenuItem.Text = "Quản lý phiếu mượn";
-            this.quảnLyPhiếuMượnToolStripMenuItem.Click += new System.EventHandler(this.quảnLyPhiếuMượnToolStripMenuItem_Click);
-            // 
-            // quảnLýPhiếuTrãToolStripMenuItem
-            // 
-            this.quảnLýPhiếuTrãToolStripMenuItem.Name = "quảnLýPhiếuTrãToolStripMenuItem";
-            this.quảnLýPhiếuTrãToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
-            this.quảnLýPhiếuTrãToolStripMenuItem.Text = "Quản lý phiếu trã";
-            this.quảnLýPhiếuTrãToolStripMenuItem.Click += new System.EventHandler(this.quảnLýPhiếuTrãToolStripMenuItem_Click);
-            // 
-            // menuThongke
-            // 
-            this.menuThongke.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.đangMượnToolStripMenuItem,
-            this.đãTrảToolStripMenuItem});
-            this.menuThongke.Image = global::QuanLyThuVien.Properties.Resources.Book_Library_256_400x400;
-            this.menuThongke.Name = "menuThongke";
-            this.menuThongke.Size = new System.Drawing.Size(95, 21);
-            this.menuThongke.Text = "Thống Kê";
-            // 
-            // đangMượnToolStripMenuItem
-            // 
-            this.đangMượnToolStripMenuItem.Name = "đangMượnToolStripMenuItem";
-            this.đangMượnToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
-            this.đangMượnToolStripMenuItem.Text = "Đang Mượn";
-            this.đangMượnToolStripMenuItem.Click += new System.EventHandler(this.đangMượnToolStripMenuItem_Click);
-            // 
-            // đãTrảToolStripMenuItem
-            // 
-            this.đãTrảToolStripMenuItem.Name = "đãTrảToolStripMenuItem";
-            this.đãTrảToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
-            this.đãTrảToolStripMenuItem.Text = "Đã Trả";
-            this.đãTrảToolStripMenuItem.Click += new System.EventHandler(this.đãTrảToolStripMenuItem_Click);
-            // 
-            // đăngXuấtToolStripMenuItem1
-            // 
-            this.đăngXuấtToolStripMenuItem1.Image = global::QuanLyThuVien.Properties.Resources.register_log_in_user_login_session_authorize_open_account_access_key_512;
-            this.đăngXuấtToolStripMenuItem1.Name = "đăngXuấtToolStripMenuItem1";
-            this.đăngXuấtToolStripMenuItem1.Size = new System.Drawing.Size(98, 21);
-            this.đăngXuấtToolStripMenuItem1.Text = "Đăng xuất";
-            this.đăngXuấtToolStripMenuItem1.Click += new System.EventHandler(this.đăngXuấtToolStripMenuItem1_Click);
-            // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.LightBlue;
@@ -622,11 +575,19 @@ namespace QuanLyThuVien.GUI
             this.groupBox1.Controls.Add(this.txtMatv2);
             this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.ImeMode = System.Windows.Forms.ImeMode.Hiragana;
-            this.groupBox1.Location = new System.Drawing.Point(8, 173);
+            this.groupBox1.Location = new System.Drawing.Point(8, 206);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(208, 147);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
+            // 
+            // txtTennd
+            // 
+            this.txtTennd.Location = new System.Drawing.Point(9, 96);
+            this.txtTennd.Name = "txtTennd";
+            this.txtTennd.ReadOnly = true;
+            this.txtTennd.Size = new System.Drawing.Size(193, 25);
+            this.txtTennd.TabIndex = 3;
             // 
             // label13
             // 
@@ -654,24 +615,93 @@ namespace QuanLyThuVien.GUI
             this.label12.TabIndex = 0;
             this.label12.Text = "Mã thành viên:";
             // 
+            // menuADM
+            // 
+            this.menuADM.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.quảnLýSáchToolStripMenuItem,
+            this.quảnLýToolStripMenuItem,
+            this.quảnLyPhiếuMượnToolStripMenuItem,
+            this.quảnLýPhiếuTrãToolStripMenuItem});
+            this.menuADM.Image = global::QuanLyThuVien.Properties.Resources.user_group_man_people_users_male_512;
+            this.menuADM.Name = "menuADM";
+            this.menuADM.Size = new System.Drawing.Size(77, 21);
+            this.menuADM.Text = "Admin";
+            // 
+            // quảnLýSáchToolStripMenuItem
+            // 
+            this.quảnLýSáchToolStripMenuItem.Image = global::QuanLyThuVien.Properties.Resources.icon_quyen_sach;
+            this.quảnLýSáchToolStripMenuItem.Name = "quảnLýSáchToolStripMenuItem";
+            this.quảnLýSáchToolStripMenuItem.Size = new System.Drawing.Size(207, 22);
+            this.quảnLýSáchToolStripMenuItem.Text = "Quản Lý Sách";
+            this.quảnLýSáchToolStripMenuItem.Click += new System.EventHandler(this.quảnLýSáchToolStripMenuItem_Click_1);
+            // 
+            // quảnLýToolStripMenuItem
+            // 
+            this.quảnLýToolStripMenuItem.Image = global::QuanLyThuVien.Properties.Resources._980229;
+            this.quảnLýToolStripMenuItem.Name = "quảnLýToolStripMenuItem";
+            this.quảnLýToolStripMenuItem.Size = new System.Drawing.Size(207, 22);
+            this.quảnLýToolStripMenuItem.Text = "Quản Lý Thành Viên";
+            this.quảnLýToolStripMenuItem.Click += new System.EventHandler(this.quảnLýToolStripMenuItem_Click);
+            // 
+            // quảnLyPhiếuMượnToolStripMenuItem
+            // 
+            this.quảnLyPhiếuMượnToolStripMenuItem.Image = global::QuanLyThuVien.Properties.Resources.pngtree_vector_notes_icon_png_image_539571;
+            this.quảnLyPhiếuMượnToolStripMenuItem.Name = "quảnLyPhiếuMượnToolStripMenuItem";
+            this.quảnLyPhiếuMượnToolStripMenuItem.Size = new System.Drawing.Size(207, 22);
+            this.quảnLyPhiếuMượnToolStripMenuItem.Text = "Quản Lý Phiếu Mượn";
+            this.quảnLyPhiếuMượnToolStripMenuItem.Click += new System.EventHandler(this.quảnLyPhiếuMượnToolStripMenuItem_Click);
+            // 
+            // quảnLýPhiếuTrãToolStripMenuItem
+            // 
+            this.quảnLýPhiếuTrãToolStripMenuItem.Image = global::QuanLyThuVien.Properties.Resources.note;
+            this.quảnLýPhiếuTrãToolStripMenuItem.Name = "quảnLýPhiếuTrãToolStripMenuItem";
+            this.quảnLýPhiếuTrãToolStripMenuItem.Size = new System.Drawing.Size(207, 22);
+            this.quảnLýPhiếuTrãToolStripMenuItem.Text = "Quản Lý Phiếu Trả";
+            this.quảnLýPhiếuTrãToolStripMenuItem.Click += new System.EventHandler(this.quảnLýPhiếuTrãToolStripMenuItem_Click);
+            // 
+            // menuThongke
+            // 
+            this.menuThongke.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.đangMượnToolStripMenuItem,
+            this.đãTrảToolStripMenuItem});
+            this.menuThongke.Image = global::QuanLyThuVien.Properties.Resources.Book_Library_256_400x400;
+            this.menuThongke.Name = "menuThongke";
+            this.menuThongke.Size = new System.Drawing.Size(95, 21);
+            this.menuThongke.Text = "Thống Kê";
+            // 
+            // đangMượnToolStripMenuItem
+            // 
+            this.đangMượnToolStripMenuItem.Image = global::QuanLyThuVien.Properties.Resources.pngtree_vector_notes_icon_png_image_539571;
+            this.đangMượnToolStripMenuItem.Name = "đangMượnToolStripMenuItem";
+            this.đangMượnToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.đangMượnToolStripMenuItem.Text = "Đang Mượn";
+            this.đangMượnToolStripMenuItem.Click += new System.EventHandler(this.đangMượnToolStripMenuItem_Click);
+            // 
+            // đãTrảToolStripMenuItem
+            // 
+            this.đãTrảToolStripMenuItem.Image = global::QuanLyThuVien.Properties.Resources.note;
+            this.đãTrảToolStripMenuItem.Name = "đãTrảToolStripMenuItem";
+            this.đãTrảToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.đãTrảToolStripMenuItem.Text = "Đã Trả";
+            this.đãTrảToolStripMenuItem.Click += new System.EventHandler(this.đãTrảToolStripMenuItem_Click);
+            // 
+            // đăngXuấtToolStripMenuItem1
+            // 
+            this.đăngXuấtToolStripMenuItem1.Image = global::QuanLyThuVien.Properties.Resources.register_log_in_user_login_session_authorize_open_account_access_key_512;
+            this.đăngXuấtToolStripMenuItem1.Name = "đăngXuấtToolStripMenuItem1";
+            this.đăngXuấtToolStripMenuItem1.Size = new System.Drawing.Size(98, 21);
+            this.đăngXuấtToolStripMenuItem1.Text = "Đăng xuất";
+            this.đăngXuấtToolStripMenuItem1.Click += new System.EventHandler(this.đăngXuấtToolStripMenuItem1_Click);
+            // 
             // pictureBox1
             // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox1.Image = global::QuanLyThuVien.Properties.Resources.child;
-            this.pictureBox1.Location = new System.Drawing.Point(57, 54);
+            this.pictureBox1.Location = new System.Drawing.Point(53, 70);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 99);
+            this.pictureBox1.Size = new System.Drawing.Size(119, 114);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
-            // 
-            // txtTennd
-            // 
-            this.txtTennd.Location = new System.Drawing.Point(9, 96);
-            this.txtTennd.Name = "txtTennd";
-            this.txtTennd.ReadOnly = true;
-            this.txtTennd.Size = new System.Drawing.Size(193, 25);
-            this.txtTennd.TabIndex = 3;
             // 
             // fGiaoDien
             // 
@@ -771,12 +801,14 @@ namespace QuanLyThuVien.GUI
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox txtMatv2;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ComboBox txtGioitinh;
         private System.Windows.Forms.Label lblThongbao;
         private System.Windows.Forms.ToolStripMenuItem đangMượnToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem đãTrảToolStripMenuItem;
         private System.Windows.Forms.TextBox txtHoten;
         private System.Windows.Forms.TextBox txtTennd;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

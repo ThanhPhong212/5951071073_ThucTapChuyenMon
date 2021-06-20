@@ -43,9 +43,7 @@ namespace QuanLyThuVien.GUI
             this.btnSua = new System.Windows.Forms.Button();
             this.dtgQLTV = new System.Windows.Forms.DataGridView();
             this.dtNgaysinh = new System.Windows.Forms.DateTimePicker();
-            this.lb_MDG = new System.Windows.Forms.Label();
-            this.lb_Trung = new System.Windows.Forms.Label();
-            this.txtGioitinh = new System.Windows.Forms.TextBox();
+            this.txtGioitinh = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtgQLTV)).BeginInit();
             this.SuspendLayout();
             // 
@@ -96,30 +94,30 @@ namespace QuanLyThuVien.GUI
             // 
             // txtMadocgia
             // 
-            this.txtMadocgia.Location = new System.Drawing.Point(144, 20);
+            this.txtMadocgia.Location = new System.Drawing.Point(145, 20);
             this.txtMadocgia.Name = "txtMadocgia";
             this.txtMadocgia.ReadOnly = true;
-            this.txtMadocgia.Size = new System.Drawing.Size(190, 25);
+            this.txtMadocgia.Size = new System.Drawing.Size(248, 25);
             this.txtMadocgia.TabIndex = 5;
             // 
             // txtHoten
             // 
-            this.txtHoten.Location = new System.Drawing.Point(144, 51);
+            this.txtHoten.Location = new System.Drawing.Point(145, 51);
             this.txtHoten.Name = "txtHoten";
-            this.txtHoten.Size = new System.Drawing.Size(190, 25);
+            this.txtHoten.Size = new System.Drawing.Size(248, 25);
             this.txtHoten.TabIndex = 6;
             // 
             // txtDiachi
             // 
-            this.txtDiachi.Location = new System.Drawing.Point(144, 144);
+            this.txtDiachi.Location = new System.Drawing.Point(145, 144);
             this.txtDiachi.Name = "txtDiachi";
-            this.txtDiachi.Size = new System.Drawing.Size(190, 25);
+            this.txtDiachi.Size = new System.Drawing.Size(248, 25);
             this.txtDiachi.TabIndex = 10;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(627, 89);
+            this.label6.Location = new System.Drawing.Point(581, 26);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(83, 17);
             this.label6.TabIndex = 37;
@@ -127,17 +125,17 @@ namespace QuanLyThuVien.GUI
             // 
             // txtTimdocgia
             // 
-            this.txtTimdocgia.Location = new System.Drawing.Point(716, 86);
+            this.txtTimdocgia.Location = new System.Drawing.Point(670, 23);
             this.txtTimdocgia.Name = "txtTimdocgia";
-            this.txtTimdocgia.Size = new System.Drawing.Size(257, 25);
+            this.txtTimdocgia.Size = new System.Drawing.Size(311, 25);
             this.txtTimdocgia.TabIndex = 35;
             this.txtTimdocgia.TextChanged += new System.EventHandler(this.txtTimdocgia_TextChanged);
             // 
             // btnXoa
             // 
-            this.btnXoa.Location = new System.Drawing.Point(901, 130);
+            this.btnXoa.Location = new System.Drawing.Point(868, 140);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(75, 36);
+            this.btnXoa.Size = new System.Drawing.Size(75, 30);
             this.btnXoa.TabIndex = 49;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
@@ -145,9 +143,9 @@ namespace QuanLyThuVien.GUI
             // 
             // btnSua
             // 
-            this.btnSua.Location = new System.Drawing.Point(786, 140);
+            this.btnSua.Location = new System.Drawing.Point(774, 140);
             this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(75, 26);
+            this.btnSua.Size = new System.Drawing.Size(75, 30);
             this.btnSua.TabIndex = 48;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
@@ -165,35 +163,21 @@ namespace QuanLyThuVien.GUI
             // dtNgaysinh
             // 
             this.dtNgaysinh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtNgaysinh.Location = new System.Drawing.Point(144, 113);
+            this.dtNgaysinh.Location = new System.Drawing.Point(145, 113);
             this.dtNgaysinh.Name = "dtNgaysinh";
-            this.dtNgaysinh.Size = new System.Drawing.Size(190, 25);
+            this.dtNgaysinh.Size = new System.Drawing.Size(248, 25);
             this.dtNgaysinh.TabIndex = 51;
-            // 
-            // lb_MDG
-            // 
-            this.lb_MDG.AutoSize = true;
-            this.lb_MDG.Location = new System.Drawing.Point(345, 35);
-            this.lb_MDG.Name = "lb_MDG";
-            this.lb_MDG.Size = new System.Drawing.Size(54, 17);
-            this.lb_MDG.TabIndex = 52;
-            this.lb_MDG.Text = "Độc giả";
-            // 
-            // lb_Trung
-            // 
-            this.lb_Trung.AutoSize = true;
-            this.lb_Trung.Location = new System.Drawing.Point(345, 80);
-            this.lb_Trung.Name = "lb_Trung";
-            this.lb_Trung.Size = new System.Drawing.Size(45, 17);
-            this.lb_Trung.TabIndex = 53;
-            this.lb_Trung.Text = "Trùng";
             // 
             // txtGioitinh
             // 
-            this.txtGioitinh.Location = new System.Drawing.Point(144, 82);
+            this.txtGioitinh.FormattingEnabled = true;
+            this.txtGioitinh.Items.AddRange(new object[] {
+            "Nam",
+            "Nữ"});
+            this.txtGioitinh.Location = new System.Drawing.Point(145, 81);
             this.txtGioitinh.Name = "txtGioitinh";
-            this.txtGioitinh.Size = new System.Drawing.Size(190, 25);
-            this.txtGioitinh.TabIndex = 54;
+            this.txtGioitinh.Size = new System.Drawing.Size(248, 25);
+            this.txtGioitinh.TabIndex = 55;
             // 
             // fQLThanhVien
             // 
@@ -202,8 +186,6 @@ namespace QuanLyThuVien.GUI
             this.BackColor = System.Drawing.Color.PowderBlue;
             this.ClientSize = new System.Drawing.Size(993, 550);
             this.Controls.Add(this.txtGioitinh);
-            this.Controls.Add(this.lb_Trung);
-            this.Controls.Add(this.lb_MDG);
             this.Controls.Add(this.dtNgaysinh);
             this.Controls.Add(this.dtgQLTV);
             this.Controls.Add(this.btnXoa);
@@ -246,8 +228,6 @@ namespace QuanLyThuVien.GUI
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.DataGridView dtgQLTV;
         private System.Windows.Forms.DateTimePicker dtNgaysinh;
-        private System.Windows.Forms.Label lb_MDG;
-        private System.Windows.Forms.Label lb_Trung;
-        private System.Windows.Forms.TextBox txtGioitinh;
+        private System.Windows.Forms.ComboBox txtGioitinh;
     }
 }

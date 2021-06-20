@@ -53,10 +53,10 @@ namespace QuanLyThuVien.GUI
         
         private void fGiaoDien_Load(object sender, EventArgs e)
         {
-            // load sách tìm kiếm
+            //load sách tìm kiếm
             dtgTimsach.DataSource = sachBUS.GetList();
 
-            // load thông tin độc giả
+            //load thông tin độc giả
             DataTable dt = _dt.GetData("select * from ACCOUNT, DOCGIA where ACCOUNT.MaDocGia = DOCGIA.MaDocGia and ACCOUNT.TenDangNhap = '" + tdn + "'");
             txtHoten.DataBindings.Add("Text", dt, "HoTen", true);
             txtMatv.DataBindings.Add("Text", dt, "MaDocGia", true);
@@ -178,7 +178,9 @@ namespace QuanLyThuVien.GUI
             fQLSach qls = new fQLSach();
             this.Hide();
             qls.ShowDialog();
+            dtgTimsach.DataSource = sachBUS.GetList();
             this.Show();
+            
         }
 
         private void quảnLýToolStripMenuItem_Click(object sender, EventArgs e)
@@ -207,9 +209,7 @@ namespace QuanLyThuVien.GUI
 
         private void đăngXuấtToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-
             this.Close();
-
         }
 
         private void fGiaoDien_FormClosing(object sender, FormClosingEventArgs e)

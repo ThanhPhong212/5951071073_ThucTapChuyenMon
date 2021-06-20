@@ -39,18 +39,12 @@ namespace QuanLyThuVien.GUI
         {
             Application.Exit();
         }
-        private void btnDangky_Click_1(object sender, EventArgs e)
-        {
-            fDangKy dk = new fDangKy();
-            this.Hide();
-            dk.ShowDialog();
-            this.Show();
-        }
         private void btnDangky_Click(object sender, EventArgs e)
         {
             fDangKy dk = new fDangKy();
             this.Hide();
             dk.ShowDialog();
+            this.Show();
         }
     }
 }

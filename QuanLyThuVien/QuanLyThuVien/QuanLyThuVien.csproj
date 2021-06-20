@@ -205,5 +205,20 @@
   <ItemGroup>
     <None Include="Resources\tải xuống.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-quyen-sach.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\980229.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngtree-vector-notes-icon-png-image_539571.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\note.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\png-transparent-school-education-textbook-school-school-supplies-material-book.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

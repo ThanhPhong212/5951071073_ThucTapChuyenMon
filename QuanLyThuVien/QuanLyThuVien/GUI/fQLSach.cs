@@ -21,9 +21,10 @@ namespace QuanLyThuVien.GUI
 
         private void fQLSach_Load(object sender, EventArgs e)
         {
-            ResetData();
+            
             dtgSach.DataSource = sachBUS.GetList();
             bigdings();
+            
         }
         public void bigdings()
         {
@@ -62,6 +63,7 @@ namespace QuanLyThuVien.GUI
             if (txtGiasach.Text != "")
                 _s.GiaSach = int.Parse(txtGiasach.Text);
                 _s.SoLuong = Convert.ToInt32(txtSoluong.Text);
+            sachBUS.Them(_s);
             fQLSach_Load(sender, e);
         }
 
@@ -71,6 +73,7 @@ namespace QuanLyThuVien.GUI
             {
                 sachBUS.Xoa(txtMasach.Text);
                 fQLSach_Load(sender, e);
+                ResetData();
             }
         }
 

@@ -24,12 +24,11 @@ namespace QuanLyThuVien.GUI
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            lb_MDG.Visible = false;
-            lb_Trung.Visible = false;
-
             DocGia dg = new DocGia();
             Random rdm = new Random();
             dg.MaDocGia = rdm.Next(0, 1000).ToString();
+            ThanhVien tv = new ThanhVien();
+            tv.MaDocGia = dg.MaDocGia;
             dg.HoTen = txtHoten.Text;
             dg.DiaChi = txtDiachi.Text;
             dg.GioiTinh = txtGioitinh.Text;
@@ -38,11 +37,14 @@ namespace QuanLyThuVien.GUI
             else
                 dg.NamSinh = dtNgaysinh.Value;
             //kiem tra loi madocgia
+            tvBUS.DangKy(tv);
             int check = docGiaBUS.Them(dg);
             if (check == 0)
-                lb_MDG.Visible = true;
+            {
+            }
+            // lb_MDG.Visible = true;
             else if (check == -1)
-                lb_Trung.Visible = true;
+               //lb_Trung.Visible = true;
             //load lai
             fQLThanhVien_Load(sender, e);
         }
@@ -91,8 +93,6 @@ namespace QuanLyThuVien.GUI
         }
         private void btnSua_Click(object sender, EventArgs e)
         {
-            lb_MDG.Visible = false;
-            lb_Trung.Visible = false;
             DocGia dg = new DocGia();
             dg.MaDocGia = txtMadocgia.Text;
             dg.HoTen = txtHoten.Text;
@@ -101,7 +101,6 @@ namespace QuanLyThuVien.GUI
             dg.NamSinh = dtNgaysinh.Value;
             //kiem tra loi madocgia
             if (!docGiaBUS.Sua(dg))
-                lb_MDG.Visible = true;
             //load lai
             fQLThanhVien_Load(sender, e);
         }
