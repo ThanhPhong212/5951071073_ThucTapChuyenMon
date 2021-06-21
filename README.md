@@ -61,9 +61,10 @@
 ## Phần 3: Các chức năng chưa hoàn thành:
 1.Chưa thêm được người dùng trong phần quản  ý thành viên
 ## Hướng dẫn sử dụng:
-Mở file .exe và làm theo hướng dẫn README.txt.
-Run chương trình.
-Đăng ký tài khoản.
-Bắt đầu sử dụng và thao tác nhập liệu với các tính năng của chương trình.
-Sau khi sử dụng xong,click ĐĂNG XUẤT để quay lại màn hình ĐĂNG NHẬP hoặc click THOÁT để đóng ứng dụng.
+* Mở file setup chọn release, chạy file setup.exe làm theo hướng dẫn.
+* Vào file data, chạy file create database.bat để tạo database.
+* Run chương trình.
+* Đăng ký tài khoản.
+* Bắt đầu sử dụng và thao tác nhập liệu với các tính năng của chương trình.
+* Sau khi sử dụng xong,click ĐĂNG XUẤT để quay lại màn hình ĐĂNG NHẬP hoặc click THOÁT để đóng ứng dụng.
 Xin cám ơn!
